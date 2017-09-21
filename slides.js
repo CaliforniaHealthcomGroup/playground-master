@@ -6,8 +6,8 @@ var stepForm = {
         $(".js-step-goto").click(stepForm.goTo);
     },
     build: function() {
-        var nextBtn   = "<button class='js-step-next'>Next</button>",
-            prevBtn   = "<button class='js-step-prev'>Prev</button>",
+        var nextBtn   = "<button class='js-step-next fa fa-long-arrow-right'></button>",
+            prevBtn   = "<button class='js-step-prev fa fa-long-arrow-left'></button>",
             container = "<div class='step-controls'></div>";
 
         $(".step-form .step").append(container);
