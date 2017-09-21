@@ -42,6 +42,20 @@ limitations under the License.
   <script src="lib.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="slides.js"></script>
+  <script>
+    $(function(){
+        $("#reset-button1").click(function(){
+            $("#reset-button").click();
+        })
+        $("#play-pause-button1").click(function(){
+            $("#play-pause-button").click();
+            $("#play-pause-button1").toggleClass("playing");
+        })
+        $("#next-step-button1").click(function(){
+            $("#next-step-button").click();
+        })
+    });
+  </script>
 </head>
 <body>
   <!-- GitHub link -->
@@ -118,14 +132,14 @@ limitations under the License.
             </div>
             <div style="float:right;">
               <div class="timeline-controls">
-                <button class="mdl-button mdl-js-button mdl-button--icon ui-resetButton" id="reset-button" title="Reset the network">
+                <button class="mdl-button mdl-js-button mdl-button--icon ui-resetButton" id="reset-button1" title="Reset the network">
                   <i class="material-icons">replay</i>
                 </button>
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored ui-playButton" id="play-pause-button" title="Run/Pause">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored ui-playButton" id="play-pause-button1" title="Run/Pause">
                   <i class="material-icons">play_arrow</i>
                   <i class="material-icons">pause</i>
                 </button>
-                <button class="mdl-button mdl-js-button mdl-button--icon ui-stepButton" id="next-step-button" title="Step">
+                <button class="mdl-button mdl-js-button mdl-button--icon ui-stepButton" id="next-step-button1" title="Step">
                   <i class="material-icons">skip_next</i>
                 </button>
               </div>
