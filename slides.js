@@ -34,10 +34,14 @@ var stepForm = {
     },
     prev: function() {
         var step = stepForm.getStep($(this).closest(".step")) - 1;
+        $(".active").removeClass("active");
+        $("[data-step="+step+"]").addClass("active");
         $(".steps").css("transform", "translateX(-" + step + "00vw)");
     },
     next: function() {
         var step = stepForm.getStep($(this).closest(".step")) + 1;
+        $(".active").removeClass("active");
+        $("[data-step="+step+"]").addClass("active");
         $(".steps").css("transform", "translateX(-" + step + "00vw)");
     },
     goTo: function() {
